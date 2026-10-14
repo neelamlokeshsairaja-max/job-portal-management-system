@@ -16,8 +16,9 @@ It demonstrates core and advanced SQL concepts, including table normalization, d
 
 The entity-relationship model and relational database design for the system are illustrated below:
 
-![Uploading er.png…]()
-
+<p align="center">
+  <img src="Job%20Portal%20Management%20System.jpg" alt="Job Portal Management System ER Diagram" width="100%">
+</p>
 
 ### ER Diagram Explanation
 

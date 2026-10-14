@@ -12,31 +12,6 @@ It demonstrates core and advanced SQL concepts, including table normalization, d
 
 ---
 
-## 🏗️ Database Architecture & ER Diagram
-
-The entity-relationship model and relational database design for the system are illustrated below:
-
-<p align="center">
-  <img src=""C:\Users\dell\OneDrive\Desktop\project\job portal.png"alt="Job Portal Management System ER Diagram" width="100%">
-</p>
-
-### ER Diagram Explanation
-
-The Entity-Relationship (ER) diagram models the architecture of the recruitment platform, illustrating how users, companies, job listings, and application workflows relate to one another:
-
-1. **`users` (Central Actor Entity):** Represents all system participants, including both **Job Seekers** and **Recruiters**, storing credentials, contact details, and user types.
-2. **`companies` & `categories`:** 
-   * `companies` stores organization details of hiring companies (One-to-Many relationship with `jobs`).
-   * `categories` classifies job openings by industry sectors (e.g., Software Development, Marketing, Finance).
-3. **`jobs`:** Stores job descriptions, titles, salaries, locations, and experience requirements, linked directly to companies and categories via foreign keys.
-4. **`job_seekers`, `skills`, & `education`:** Extends user profiles with candidate-specific data, manages Many-to-Many skill mappings via `seeker_skills`, and records educational qualifications.
-5. **`applications` & `interviews`:** 
-   * `applications` links job seekers to jobs, tracking candidate application progress and statuses (`Applied`, `Shortlisted`, `Selected`, `Rejected`).
-   * `interviews` connects directly to applications to schedule and track interview rounds and feedback.
-6. **Audit Logs (`user_audit` & `job_audit`):** Background tables populated automatically via database triggers to log new user registrations and job insertions.
-
----
-
 ## ✨ Features & Capabilities
 
 - **User & Profile Management:** Differentiates between Job Seekers and Recruiters with contact and skill mappings.
@@ -46,6 +21,23 @@ The Entity-Relationship (ER) diagram models the architecture of the recruitment 
 - **Automated Audit Trail:** Tracks system updates, job postings, and user insertions using background database triggers.
 - **Custom Functions & Logic:** Includes procedural logic to categorize salary brackets, evaluate application scores, and determine experience levels.
 - **Query Bank & Reports:** Provides multi-table aggregation reports for company applications, salary analysis, and candidate demographics.
+
+---
+
+## 🏗️ Database Architecture
+
+The system contains **11 core relational tables**:
+
+1. **`users`**: Central table for system profiles (Seekers and Recruiters).
+2. **`companies`**: Details of hiring organizations.
+3. **`categories`**: Classification of job fields (e.g., IT, Finance, Marketing).
+4. **`jobs`**: Job postings linked to companies and categories.
+5. **`job_seekers`**: Extended profiles for job candidates.
+6. **`skills` & `seeker_skills`**: Skill inventory and seeker-to-skill mappings.
+7. **`education`**: Candidate educational records.
+8. **`applications`**: Application tracking linking seekers and job listings.
+9. **`interviews`**: Scheduled interviews for shortlisted applicants.
+10. **`user_audit` & `job_audit`**: Automated logging tables for tracking schema insertions and transactions.
 
 ---
 
@@ -89,4 +81,4 @@ Indexes created across high-frequency lookup fields:
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/neelamlokeshsairaja-max/job-portal-management-system.git](https://github.com/neelamlokeshsairaja-max/job-portal-management-system.git)
+   git clone [https://github.com/your-username/job-portal-management-system.git](https://github.com/your-username/job-portal-management-system.git)
